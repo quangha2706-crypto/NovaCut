@@ -91,15 +91,6 @@ target_link_libraries(${PROJECT_NAME} PRIVATE
     ${FFMPEG_LIBRARIES}
 )
 
-# Platform-specific settings
-if(WIN32)
-    # Windows-specific settings
-    set_target_properties(${PROJECT_NAME} PROPERTIES WIN32_EXECUTABLE TRUE)
-elseif(APPLE)
-    # macOS-specific settings
-    set_target_properties(${PROJECT_NAME} PROPERTIES MACOSX_BUNDLE TRUE)
-endif()
-
 # Install target
 install(TARGETS ${PROJECT_NAME}
     RUNTIME DESTINATION bin
