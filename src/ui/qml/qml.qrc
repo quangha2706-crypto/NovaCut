@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/">
+        <file>TimelineView.qml</file>
+        <file>PreviewView.qml</file>
+    </qresource>
+</RCC>
