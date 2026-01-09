@@ -1,0 +1,72 @@
+# Build directories
+build/
+cmake-build-*/
+*.exe
+*.out
+*.app
+
+# IDE files
+.vscode/
+.idea/
+*.pro.user
+*.autosave
+
+# Compiled Object files
+*.o
+*.obj
+*.lo
+*.slo
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Compiled Static libraries
+*.a
+*.lib
+*.lai
+*.la
+
+# Qt specific
+moc_*.cpp
+moc_*.h
+qrc_*.cpp
+ui_*.h
+*.qm
+
+# CMake
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+*.cmake
+!CMakeLists.txt
+
+# Dependencies
+third_party/*/
+!third_party/README.md
+
+# Models
+models/*.bin
+models/*.onnx
+!models/README.md
+
+# User files
+*.user
+*.suo
+*.sdf
+*.opensdf
+
+# macOS
+.DS_Store
+*.dmg
+
+# Windows
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.bak
+*.swp
+*~
