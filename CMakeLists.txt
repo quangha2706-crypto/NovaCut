@@ -74,8 +74,8 @@ set(HEADERS
 # QML resources
 qt6_add_resources(QML_RESOURCES src/ui/qml/qml.qrc)
 
-# Create executable
-add_executable(${PROJECT_NAME} 
+# Create executable (using qt_add_executable for proper platform entry point handling)
+qt_add_executable(${PROJECT_NAME} 
     ${SOURCES}
     ${HEADERS}
     ${QML_RESOURCES}
@@ -90,15 +90,6 @@ target_link_libraries(${PROJECT_NAME} PRIVATE
     Qt6::Multimedia
     ${FFMPEG_LIBRARIES}
 )
-
-# Platform-specific settings
-if(WIN32)
-    # Windows-specific settings
-    set_target_properties(${PROJECT_NAME} PROPERTIES WIN32_EXECUTABLE TRUE)
-elseif(APPLE)
-    # macOS-specific settings
-    set_target_properties(${PROJECT_NAME} PROPERTIES MACOSX_BUNDLE TRUE)
-endif()
 
 # Install target
 install(TARGETS ${PROJECT_NAME}
