@@ -74,8 +74,8 @@ set(HEADERS
 # QML resources
 qt6_add_resources(QML_RESOURCES src/ui/qml/qml.qrc)
 
-# Create executable
-add_executable(${PROJECT_NAME} 
+# Create executable (using qt_add_executable for proper platform entry point handling)
+qt_add_executable(${PROJECT_NAME} 
     ${SOURCES}
     ${HEADERS}
     ${QML_RESOURCES}
